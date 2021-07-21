@@ -45,7 +45,7 @@ public class ImageController {
 	}
 	
 	@PostMapping("/addImage/{id}")
-	public boolean uplaodImage(@PathVariable (value="id") String tag,@RequestParam("imageFile") MultipartFile file) throws IOException {
+	public boolean uploadImage(@PathVariable (value="id") String tag,@RequestParam("imageFile") MultipartFile file) throws IOException {
 
 		System.out.println("Original Image Byte Size - " + file.getBytes().length);
 		ImageModel img = new ImageModel(file.getOriginalFilename(),compressBytes(file.getBytes()),tag);

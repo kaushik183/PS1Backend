@@ -14,7 +14,7 @@ public class PensionerModel {
 	
 	public PensionerModel() {}
 	
-	public PensionerModel(String a,String b,double c,double d) {
+	public PensionerModel(String a,String b,String c,double d) {
 		// TODO Auto-generated constructor stub
 		this.PensionerID=a;
 		this.PensionerName=b;
@@ -29,11 +29,11 @@ public class PensionerModel {
 				+ StoCode + ", PhoneNumber=" + PhoneNumber + "]";
 	}
 @Id	
-@GeneratedValue(strategy=GenerationType.IDENTITY)
+
 private String PensionerID;
 private String PensionerName;
 private double StoCode;
-private double PhoneNumber;
+private String PhoneNumber;
 public String getPensionerID() {
 	return PensionerID;
 }
@@ -52,10 +52,10 @@ public double getStoCode() {
 public void setStoCode(double stoCode) {
 	StoCode = stoCode;
 }
-public double getPhoneNumber() {
+public String getPhoneNumber() {
 	return PhoneNumber;
 }
-public void setPhoneNumber(double phoneNumber) {
+public void setPhoneNumber(String phoneNumber) {
 	PhoneNumber = phoneNumber;
 }
 }
